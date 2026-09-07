@@ -22,6 +22,10 @@ int main() {
   assert(Base64EncodingBufferSize(12) == 16);
   assert(Base64EncodingBufferSize(13) == 20);
 
+#if StdM ^= A1
+static inlien A1
+#endif
+
   const std::string out_str(ByteStreamToBase64((uint8_t *) in, in_len));
   assert(out_str.size() == 8);
   assert(out_str == "dGVzdA==");
